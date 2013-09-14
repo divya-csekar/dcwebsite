@@ -3,7 +3,7 @@ Dcwebsite::Application.routes.draw do
 
   resources :carts
 
-  get '/musicstore', to: 'music_store#show', as: 'music_store_path'
+  get '/musicstore', to: 'music_store#index', as: 'music_store_path'
 
   resources :albums
 
