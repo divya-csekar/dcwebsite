@@ -1,4 +1,8 @@
 Dcwebsite::Application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
   get "music_store/index"
 
   resources :albums
