@@ -4,10 +4,10 @@ class AlbumsControllerTest < ActionController::TestCase
   setup do
     @album = albums(:one)
     @update = {
-      title: 'overexposed',
-      description: 'maroon 5 2013',
-      price: 7.50 ,
-      artist: 'maroon5'
+      :title => 'overexposed',
+      :description => 'maroon 5 2013',
+      :price => 7.50 ,
+      :artistid => 'maroon5'
     }
   end
 
