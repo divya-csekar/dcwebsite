@@ -1,6 +1,6 @@
 /* Global styles */
 
-#album_list #notice {
+#store #notice {
     color: #000;
     border: 2px solid red;
     padding: 1em;
@@ -10,7 +10,7 @@
 }
 
 
-#album_list h1 {
+#store h1 {
     font:  150% sans-serif;
     color: #226;
     border-bottom: 3px dotted #77d;
@@ -81,6 +81,49 @@
 #album_list .list_line_odd {
     background:   #f8b0f8;
 }
+
+/* START:mainlayout */
+/* Styles for main page */
+
+#banner {
+    background: #9c9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid dodgerblue;
+    font: small-caps 40px/40px "Times New Roman", serif;
+    color: #299;
+    text-align: center;
+}
+
+#banner img {
+    float: left;
+}
+
+#columns {
+    background: crimson;
+}
+
+#main {
+    margin-left: 17em;
+    padding-top: 4ex;
+    padding-left: 2em;
+    background: white;
+}
+
+#side {
+    float: left;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    width: 16em;
+    background: salmon;
+}
+
+#side a {
+    color: chartreuse;
+    font-size: small;
+}
+/* END:mainlayout */
 
 /* An entry in the store catalog */
 

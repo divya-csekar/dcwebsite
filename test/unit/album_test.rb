@@ -1,6 +1,16 @@
 require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
+  fixtures :albums
+  test "album is not valid without a unique title" do
+    album = Album.new(:title => albums(:ruby).title,
+                          :description => "yyy",
+                          :price => 1,
+                          :artistid => "fredgif")
+    assert !album.save
+    assert_equal "has already been taken", album.errors[:title].join('; ')
+  end
+
   test "album attributes must not be empty" do
     album = Album.new
     assert album.invalid?

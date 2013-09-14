@@ -1,4 +1,6 @@
 Dcwebsite::Application.routes.draw do
+  get "music_store/index"
+
   resources :albums
 
   get "static_pages/home"
@@ -8,6 +10,8 @@ Dcwebsite::Application.routes.draw do
   get "static_pages/main"
 
   get "static_pages/about"
+
+  match '/musicstore',    :to => 'music_store#index', via: 'get'
 
   root :to => 'static_pages#home'
   # The priority is based upon order of creation:

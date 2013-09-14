@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dcwebsite</title>
+  <title>ChordStruck</title>
+  <%= stylesheet_link_tag "scaffold" %>
   <%= stylesheet_link_tag "dcwebsite", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id="store">
+  <div id="banner">
+    <%= image_tag('chordstruck_logo.gif', height: '100', width: '100') %>
+    <%= @page_title || "ChordStruck" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href='/static_pages/home'>Home</a><br />
+      <a href='/static_pages/help'>Help</a><br />
+      <a href='/static_pages/main'>Main</a><br />
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
