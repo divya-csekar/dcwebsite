@@ -1,0 +1,33 @@
+<div id="album_list">
+  <h1>Listing albums</h1>
+  <table>
+    <% @albums.each do |album| %>
+
+        <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+          <td class="list_title">
+            <dl>
+              <dt><%= album.title %></dt>
+            </dl>
+          </td>
+          <td class="list_description">
+            <dl>
+              <dd><%= truncate(strip_tags(album.description),
+                               :length => 80) %></dd>
+              <dt><%= album.price %></dt>
+              <dt><%= album.artistid %></dt>
+            </dl>
+          </td>
+          <td class="list_actions">
+            <%= link_to 'Show', album %><br/>
+            <%= link_to 'Edit', edit_album_path(album) %><br/>
+            <%= link_to 'Destroy', album,
+                        :confirm => 'Are you sure?',
+                        :method => :delete %>
+
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>
+<br />
+<%= link_to 'New album', new_album_path %>
